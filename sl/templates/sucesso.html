@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block titulo %}
+    document
+{% endblock titulo %}
+
+{% block conteudo %}
+    {% if erro %}
+        <h1>Houve um erro</h1>
+        <p>{{ erro }}</p>
+    {% else %}
+        <h1>Você entrou</h1>
+        <p>parabéns você entrou</p>
+    {% endif %}
+{% endblock conteudo %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block titulo %}
+    document
+{% endblock titulo %}
+
+{% block conteudo %}
+    <h1>Cadastrar</h1>
+    <form action="{%url 'cadastro'%}" method="post" >
+        {%csrf_token%}
+        
+        <label for="inputPassword5" class="form-label">Nome</label>
+        <input type="text" id="inputPassword5" name="username" class="form-control" aria-describedby="passwordHelpBlock">
+        
+        <label for="inputPassword5" class="form-label">Password</label>
+        <input type="password" id="inputPassword5" name="password" class="form-control" aria-describedby="passwordHelpBlock">
+        <br>
+        <button type="submit" class="btn btn-success">Logar-se</button>
+    </form>
+{% endblock conteudo %}
